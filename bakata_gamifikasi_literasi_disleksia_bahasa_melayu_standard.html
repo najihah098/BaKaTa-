@@ -498,7 +498,7 @@
             let femaleMalay = voices.find(v => {
                 const lang = (v.lang || '').toLowerCase().replace('_', '-');
                 const name = (v.name || '').toLowerCase();
-                const isMalay = lang.startsWith('ms') || name.includes('malay') || name.includes('malaysia');
+                const isMalay = lang === 'ms-my' || lang.startsWith('ms-') || name.includes('malay') || name.includes('malaysia');
                 const isIndonesian = lang.startsWith('id') || name.includes('indonesia');
                 const isMale = name.includes('male') || name.includes('pria') || name.includes('rizwan') || name.includes('guy') || name.includes('david') || name.includes('george') || name.includes('boy');
                 return isMalay && !isIndonesian && !isMale;
